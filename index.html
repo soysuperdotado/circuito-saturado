@@ -1,0 +1,1013 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Sistema inteligente, Circuito saturado · Curso en video · Soy Superdotado</title>
+<meta name="description" content="Curso en video para adultos con altas capacidades: cuatro módulos para entender tus funciones ejecutivas y diseñar apoyos para arrancar, organizarte y sostener lo que empiezas.">
+<meta name="theme-color" content="#0E2A52">
+<link rel="icon" type="image/png" href="img/logo-soy-superdotado.png">
+<link rel="canonical" href="https://soysuperdotado.github.io/circuito-saturado/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_AR">
+<meta property="og:site_name" content="Soy Superdotado">
+<meta property="og:title" content="Sistema inteligente, Circuito saturado">
+<meta property="og:description" content="Curso en video para adultos con altas capacidades: cuatro módulos para entender tus funciones ejecutivas y diseñar apoyos para arrancar, organizarte y sostener lo que empiezas.">
+<meta property="og:url" content="https://soysuperdotado.github.io/circuito-saturado/">
+<meta property="og:image" content="https://soysuperdotado.github.io/circuito-saturado/img/compartir.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preload" href="assets/fonts/plus-jakarta-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Course","name":"Altas capacidades y funcionamiento ejecutivo","description":"Curso en video para adultos con altas capacidades: cuatro módulos para entender tus funciones ejecutivas y diseñar apoyos para arrancar, organizarte y sostener lo que empiezas.","inLanguage":"es","provider":{"@type":"Organization","name":"Soy Superdotado","url":"https://soysuperdotadoweb.com"}}</script>
+<style>
+@font-face { font-family: 'Plus Jakarta Sans'; font-style: normal; font-weight: 200 800; font-display: swap; src: url('assets/fonts/plus-jakarta-sans-latin.woff2') format('woff2'); }
+@font-face { font-family: 'Fraunces'; font-style: italic; font-weight: 100 900; font-display: swap; src: url('assets/fonts/fraunces-latin-italic.woff2') format('woff2'); }
+/* Layout: la tesis a la izquierda y el video de muestra a la derecha;
+   luego secciones de una columna ancha que alternan papel frío y azul profundo, como las diapositivas del curso. */
+:root {
+  --navy: #0E2A52;
+  --navy-deep: #0A2145;
+  --navy-soft: #17477B;
+  --teal: #17708C;
+  --teal-light: #7AD0E6;
+  --lime: #B2DC3A;
+  --paper: #F6F9FC;
+  --card: #E9F0F6;
+  --line: #D0DCE9;
+  --ink: #1D2E45;
+  --muted: #485A72;
+  --white: #FFFFFF;
+  --on-navy-soft: #CBD9EA;
+  --sans: 'Plus Jakarta Sans', 'Segoe UI', system-ui, -apple-system, sans-serif;
+  --serif: 'Fraunces', Georgia, 'Times New Roman', serif;
+  --max: 1120px;
+  --gutter: clamp(1rem, 4vw, 2.5rem);
+  --section: clamp(3.5rem, 7vw, 6rem);
+  --radius: 18px;
+  color-scheme: light;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--sans);
+  font-size: 1.0625rem;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+[hidden] { display: none !important; }
+img, video, svg { max-width: 100%; }
+img, video { display: block; height: auto; }
+h1, h2, h3, p, ul, ol, dl, dd, figure, blockquote { margin: 0; }
+ul, ol { padding: 0; list-style: none; }
+h1, h2, h3 { text-wrap: balance; color: var(--navy); letter-spacing: -0.015em; }
+a { color: var(--teal); text-underline-offset: 0.18em; }
+em.acento { font-family: var(--serif); font-style: italic; font-weight: 500; letter-spacing: -0.01em; color: var(--teal); }
+:focus-visible { outline: 3px solid var(--teal); outline-offset: 3px; border-radius: 6px; }
+.sobre-navy :focus-visible { outline-color: var(--lime); }
+.solo-lectores { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+
+.wrap { max-width: var(--max); margin-inline: auto; padding-inline: var(--gutter); }
+.seccion { padding-block: var(--section); }
+section[id] { scroll-margin-top: 4rem; }
+.seccion > .wrap { display: grid; gap: clamp(1.75rem, 3.5vw, 2.75rem); }
+.encabezado { display: grid; gap: 0.75rem; max-width: 46rem; }
+.etiqueta { font-size: 0.8125rem; font-weight: 700; letter-spacing: 0.09em; text-transform: uppercase; color: var(--teal); }
+h2 { font-size: clamp(1.75rem, 3.4vw, 2.6rem); font-weight: 800; line-height: 1.14; }
+.bajada { font-size: 1.125rem; color: var(--muted); max-width: 40rem; }
+
+/* Botones */
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem;
+  min-height: 3.25rem; padding: 0.8rem 1.6rem;
+  border: 2px solid transparent; border-radius: 999px;
+  font: inherit; font-weight: 700; font-size: 1rem; line-height: 1.2; text-decoration: none; cursor: pointer;
+  transition: transform 0.15s ease, background-color 0.15s ease, border-color 0.15s ease;
+}
+.btn:hover { transform: translateY(-1px); }
+.btn-navy { background: var(--navy); color: var(--white); }
+.btn-navy:hover { background: var(--navy-soft); }
+.btn-lime { background: var(--lime); color: var(--navy-deep); }
+.btn-lime:hover { background: #C3E95A; }
+.btn-linea { background: transparent; color: var(--navy); border-color: var(--line); }
+.btn-linea:hover { border-color: var(--navy); }
+.btn svg { flex: none; }
+
+/* Cabecera */
+.cabecera {
+  position: sticky; top: env(safe-area-inset-top, 0px); z-index: 20;
+  background: rgba(246, 249, 252, 0.94);
+  -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--line);
+}
+.cabecera .wrap { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding-block: 0.6rem; }
+.marca { display: inline-flex; align-items: center; gap: 0.6rem; color: var(--navy); font-weight: 800; font-size: 0.98rem; text-decoration: none; letter-spacing: -0.01em; }
+.marca img { width: 40px; height: 40px; }
+.menu { display: flex; align-items: center; gap: 1.6rem; }
+.menu a:not(.btn) { color: var(--ink); font-size: 0.95rem; font-weight: 600; text-decoration: none; }
+.menu a:not(.btn):hover { color: var(--teal); }
+.progreso { position: absolute; left: 0; right: 0; bottom: -1px; height: 3px; background: linear-gradient(90deg, var(--teal), var(--lime)); transform: scaleX(0); transform-origin: 0 50%; }
+.cabecera .btn { min-height: 2.75rem; padding: 0.5rem 1.15rem; font-size: 0.95rem; }
+
+/* Hero */
+.hero { padding-block: clamp(2.5rem, 5vw, 4.5rem) clamp(2rem, 4vw, 3rem); overflow: hidden; }
+.hero-principal { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.04fr); gap: clamp(2rem, 4vw, 3.5rem); align-items: center; }
+.hero-texto { display: grid; gap: 1.25rem; }
+.hero h1 { font-size: clamp(2.3rem, 3.3vw, 2.9rem); font-weight: 800; line-height: 1.04; letter-spacing: -0.03em; color: var(--white); }
+.hero h1 em.acento { display: block; letter-spacing: -0.02em; }
+.hero .hero-tema { font-size: clamp(1.15rem, 1.6vw, 1.35rem); font-weight: 600; line-height: 1.35; color: var(--white); text-wrap: balance; }
+.hero .bajada { font-size: clamp(1.05rem, 1.35vw, 1.15rem); max-width: 33rem; }
+.acciones { display: flex; flex-wrap: wrap; align-items: center; gap: 0.8rem; margin-top: 0.5rem; }
+.sobre-navy .btn-linea { color: var(--white); border-color: rgba(255, 255, 255, 0.34); }
+.sobre-navy .btn-linea:hover { border-color: var(--white); }
+.hero-clase { display: grid; gap: 0.7rem; margin: 0; }
+.hero-clase img { width: 100%; aspect-ratio: 16 / 9; border-radius: var(--radius); border: 1px solid rgba(255, 255, 255, 0.28); box-shadow: 0 28px 60px rgba(3, 12, 30, 0.55); background: var(--navy-deep); }
+.video-marco { position: relative; border-radius: var(--radius); overflow: hidden; border: 1px solid rgba(255, 255, 255, 0.28); box-shadow: 0 28px 60px rgba(3, 12, 30, 0.55); background: var(--navy-deep); container-type: inline-size; }
+.video-marco video { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; background: var(--navy-deep); }
+.video-play { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 0.7rem; padding: 0 0 0 58%; border: 0; background: linear-gradient(90deg, rgba(10, 33, 69, 0) 50%, rgba(10, 33, 69, 0.32) 100%); color: var(--white); font: inherit; cursor: pointer; }
+.video-icono { position: relative; width: clamp(3.4rem, 7vw, 4.5rem); width: clamp(3.4rem, 13cqi, 5.5rem); aspect-ratio: 1; border-radius: 50%; background: var(--lime); box-shadow: 0 10px 30px rgba(3, 12, 30, 0.45); transition: transform 0.2s ease; }
+.video-icono::after { content: ''; position: absolute; top: 50%; left: 54%; transform: translate(-50%, -50%); border-style: solid; border-width: 0.6em 0 0.6em 1em; border-color: transparent transparent transparent var(--navy); font-size: clamp(0.85rem, 1.6vw, 1.1rem); font-size: clamp(0.85rem, 2.9cqi, 1.35rem); }
+.video-play:hover .video-icono, .video-play:focus-visible .video-icono { transform: scale(1.07); }
+.video-play:focus-visible { outline: 3px solid var(--lime); outline-offset: -3px; }
+.hero-clase figcaption { font-size: 0.9rem; color: var(--on-navy-soft); text-wrap: balance; }
+.ficha { display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr) minmax(0, 1.1fr) minmax(0, 1.1fr); margin: clamp(2rem, 4vw, 3rem) 0 0; border-top: 1px solid rgba(255, 255, 255, 0.18); }
+.ficha > div { padding: 1.15rem 1.25rem 0 0; }
+.ficha > div + div { padding-left: 1.25rem; border-left: 1px solid rgba(255, 255, 255, 0.18); }
+.ficha dt { margin-bottom: 0.3rem; font-size: 0.8125rem; font-weight: 700; letter-spacing: 0.09em; text-transform: uppercase; color: var(--teal-light); }
+.ficha dd { color: var(--white); font-size: 1.02rem; font-weight: 600; line-height: 1.4; font-variant-numeric: tabular-nums; text-wrap: balance; }
+.ficha .precios { white-space: nowrap; }
+.ficha .precios span + span::before { content: ' · '; }
+.ficha .nota { display: block; font-size: 0.9rem; font-weight: 400; color: var(--on-navy-soft); }
+
+/* ¿Te suena? */
+.suena { padding-bottom: clamp(1rem, 2vw, 1.5rem); }
+.frases { display: flex; flex-wrap: wrap; gap: 0.75rem; max-width: 60rem; }
+.frases li { padding: 0.8rem 1.25rem; border-radius: 999px 999px 999px 6px; background: var(--white); border: 1px solid var(--line); font-family: var(--serif); font-style: italic; font-size: clamp(1.1rem, 1.6vw, 1.25rem); line-height: 1.35; color: var(--navy); }
+.sin-aire { padding-top: clamp(2.5rem, 5vw, 4rem); }
+
+/* Para quién es */
+.dirigido .wrap { grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr); align-items: start; gap: clamp(2rem, 5vw, 4rem); }
+.dirigido-texto { display: grid; gap: 1.1rem; }
+.dirigido-texto > p { font-size: 1.125rem; color: var(--muted); }
+.dirigido-texto > p.para-ti { margin-top: 0.4rem; padding-top: 1.4rem; border-top: 1px solid var(--line); font-size: clamp(1.15rem, 1.8vw, 1.3rem); font-weight: 600; line-height: 1.45; color: var(--navy); text-wrap: pretty; }
+.trabajo { display: grid; gap: 1rem; padding: clamp(1.25rem, 3vw, 2rem); border-radius: 24px; background: var(--card); }
+.trabajo h3 { font-size: 1.3rem; font-weight: 800; }
+.funciones li { padding: 0.7rem 0; border-top: 1px solid rgba(14, 42, 82, 0.14); color: var(--navy); font-weight: 600; line-height: 1.35; }
+.funciones li:last-child { border-bottom: 1px solid rgba(14, 42, 82, 0.14); }
+.funciones .transversal span { display: block; margin-top: 0.1rem; font-size: 0.92rem; font-weight: 400; color: var(--muted); }
+.trabajo .nota { font-size: 0.98rem; color: var(--ink); }
+.busca { grid-column: 1 / -1; display: grid; gap: 1.1rem; margin-top: clamp(0.5rem, 2vw, 1.5rem); }
+.busca h3 { font-size: 0.8125rem; font-weight: 700; letter-spacing: 0.09em; text-transform: uppercase; color: var(--teal); }
+.busca ul { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem clamp(1.25rem, 3vw, 2.5rem); }
+.busca li { padding-top: 1rem; border-top: 2px solid var(--navy); font-size: clamp(1.08rem, 1.5vw, 1.2rem); font-weight: 600; line-height: 1.4; color: var(--navy); text-wrap: balance; }
+
+/* Banda azul: idea central */
+.sobre-navy { background: linear-gradient(160deg, var(--navy-deep) 0%, var(--navy) 55%, var(--navy-soft) 130%); color: var(--white); }
+.sobre-navy h2, .sobre-navy h3 { color: var(--white); }
+.sobre-navy .etiqueta { color: var(--lime); }
+.sobre-navy em.acento { color: var(--teal-light); }
+.sobre-navy p { color: var(--on-navy-soft); }
+.sobre-navy a:not(.btn) { color: var(--lime); }
+
+/* Palabras de la docente */
+.cita-banda { padding-block: clamp(3rem, 6vw, 4.75rem); }
+.cita { display: grid; gap: 1.6rem; max-width: 52rem; margin: 0; }
+.cita blockquote { margin: 0; }
+.cita blockquote p { font-family: var(--serif); font-style: italic; font-weight: 400; font-size: clamp(1.45rem, 2.7vw, 2.05rem); line-height: 1.36; color: var(--white); text-wrap: pretty; }
+.cita figcaption { display: flex; align-items: center; gap: 1rem; font-size: 0.95rem; line-height: 1.4; color: var(--on-navy-soft); }
+.cita figcaption img { flex: none; width: 4rem; height: 4rem; border-radius: 50%; object-fit: cover; border: 2px solid rgba(255, 255, 255, 0.4); }
+.cita figcaption strong { display: block; font-size: 1.05rem; color: var(--white); }
+
+/* Programa */
+.sintesis { --sep: clamp(1rem, 2.5vw, 2rem); display: grid; gap: 1.25rem; padding: clamp(1.25rem, 3vw, 2rem); border-radius: 24px; background: var(--card); }
+.sintesis h3 { font-size: 0.8125rem; font-weight: 700; letter-spacing: 0.09em; text-transform: uppercase; color: var(--teal); }
+.sintesis ol { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: var(--sep); counter-reset: etapa; }
+.sintesis li { position: relative; display: grid; gap: 0.3rem; align-content: start; padding-top: 3rem; counter-increment: etapa; }
+.sintesis li::before { content: counter(etapa); position: absolute; left: 0; top: 0; display: grid; place-items: center; width: 2.25rem; height: 2.25rem; border-radius: 50%; background: var(--navy); color: var(--white); font-size: 0.95rem; font-weight: 800; }
+.sintesis li:last-child::before { background: var(--lime); color: var(--navy-deep); }
+.sintesis li:not(:last-child)::after { content: ''; position: absolute; left: 2.75rem; right: calc(-1 * var(--sep) + 0.5rem); top: calc(1.125rem - 1px); height: 2px; background: var(--navy); opacity: 0.25; }
+.sintesis strong { font-size: 1.08rem; font-weight: 800; line-height: 1.25; color: var(--navy); }
+.sintesis span { font-size: 0.98rem; line-height: 1.4; color: var(--muted); }
+.modulos { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(2.25rem, 4vw, 3.25rem) clamp(1.5rem, 3vw, 2.5rem); }
+.modulo { display: grid; gap: 0.55rem; align-content: start; }
+.modulo img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; margin-bottom: 0.5rem; border-radius: var(--radius); background: var(--navy); }
+.modulo .modulo-meta { display: flex; flex-wrap: wrap; gap: 0.5rem; align-items: center; font-size: 0.875rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--teal); }
+.modulo-meta .duracion { padding: 0.15rem 0.65rem; border-radius: 999px; background: var(--card); color: var(--navy); letter-spacing: 0.02em; text-transform: none; font-variant-numeric: tabular-nums; }
+.modulo h3 { font-size: clamp(1.3rem, 2vw, 1.5rem); font-weight: 800; line-height: 1.2; }
+.modulo .modulo-logro { font-size: 1.08rem; color: var(--muted); }
+.modulo .modulo-extra { justify-self: start; padding: 0.35rem 0.8rem; border-radius: 10px; background: var(--card); color: var(--navy); font-size: 0.92rem; font-weight: 600; }
+.modulo-mas { margin-top: 0.4rem; }
+.modulo-mas summary { display: inline-flex; align-items: center; gap: 0.45rem; min-height: 2.75rem; padding: 0.35rem 1rem; border: 1px solid var(--line); border-radius: 999px; color: var(--navy); font-size: 0.92rem; font-weight: 700; cursor: pointer; list-style: none; }
+.modulo-mas summary::-webkit-details-marker { display: none; }
+.modulo-mas summary::after { content: ''; width: 0.5rem; height: 0.5rem; border-right: 2px solid var(--teal); border-bottom: 2px solid var(--teal); transform: translateY(-2px) rotate(45deg); transition: transform 0.2s ease; }
+.modulo-mas[open] summary::after { transform: translateY(2px) rotate(-135deg); }
+.modulo-mas summary:hover { border-color: var(--navy); }
+.modulo-mas > p { margin-top: 0.75rem; max-width: 34rem; font-size: 0.98rem; color: var(--muted); }
+.modulo-mas > .actividad { padding-top: 0.75rem; border-top: 1px solid var(--line); color: var(--ink); font-size: 0.95rem; }
+
+/* Qué incluye */
+.incluye-banda { background: var(--white); border-block: 1px solid var(--line); }
+.incluye { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: clamp(1.5rem, 3vw, 2.5rem); }
+.incluye li { display: grid; gap: 0.4rem; align-content: start; padding-top: 1.1rem; border-top: 2px solid var(--navy); }
+.incluye .cifra { font-size: clamp(3rem, 6vw, 4rem); font-weight: 800; line-height: 1; letter-spacing: -0.03em; color: var(--navy); font-variant-numeric: tabular-nums; }
+.incluye h3 { font-size: 1.2rem; font-weight: 800; }
+.incluye p { color: var(--muted); font-size: 1rem; }
+.incluye-foto { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; margin-top: 0.6rem; border-radius: 14px; }
+
+/* Quién lo dicta */
+.docente .wrap { grid-template-columns: minmax(0, 20rem) minmax(0, 1fr); align-items: start; gap: clamp(1.75rem, 5vw, 4rem); }
+.docente img { width: 100%; aspect-ratio: 1 / 1; object-fit: cover; object-position: 50% 30%; border-radius: 24px; }
+.docente-texto { display: grid; gap: 1rem; }
+.docente-nombre { display: grid; gap: 0.2rem; }
+.docente-nombre p { font-size: 0.98rem; font-weight: 700; color: var(--teal); }
+.docente-texto > p:not(.etiqueta) { color: var(--muted); max-width: 40rem; }
+.credenciales { display: grid; gap: 0.55rem; max-width: 40rem; }
+.credenciales li { position: relative; padding-left: 1.5rem; color: var(--ink); }
+.credenciales li::before { content: ''; position: absolute; left: 0; top: 0.62em; width: 0.6rem; height: 0.6rem; border-radius: 50%; background: var(--lime); border: 2px solid var(--navy); }
+
+/* Comprar */
+.comprar .wrap { grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr); align-items: start; gap: clamp(2rem, 5vw, 4rem); }
+.comprar-texto { display: grid; gap: 1.5rem; }
+.pasos { display: grid; gap: 1.1rem; counter-reset: paso; }
+.pasos li { display: grid; grid-template-columns: 2.4rem 1fr; gap: 0.15rem 0.9rem; counter-increment: paso; }
+.pasos li::before { content: counter(paso); grid-row: span 2; display: grid; place-items: center; width: 2.4rem; height: 2.4rem; border-radius: 50%; background: var(--lime); color: var(--navy-deep); font-weight: 800; }
+.pasos strong { color: var(--white); font-size: 1.08rem; line-height: 1.35; align-self: end; }
+.pasos span { grid-column: 2; color: var(--on-navy-soft); font-size: 0.98rem; line-height: 1.5; }
+.aviso-gmail { display: grid; gap: 0.35rem; padding: 1rem 1.15rem; border-left: 4px solid var(--lime); border-radius: 0 12px 12px 0; background: rgba(178, 220, 58, 0.12); }
+.aviso-gmail p { color: var(--white); font-size: 0.98rem; line-height: 1.5; }
+.aviso-gmail p:first-child strong { font-size: 1.05rem; }
+.aviso-gmail a { color: var(--lime); font-weight: 700; text-decoration: underline; text-underline-offset: 2px; }
+.resumen { display: grid; gap: 0.8rem; padding: 1.25rem 1.4rem; border: 1px solid rgba(255, 255, 255, 0.2); border-radius: var(--radius); }
+.resumen h3 { font-size: 0.8125rem; font-weight: 700; letter-spacing: 0.09em; text-transform: uppercase; color: var(--teal-light); }
+.resumen ul { display: grid; gap: 0.45rem; }
+.resumen li { position: relative; padding-left: 1.4rem; color: var(--white); line-height: 1.4; }
+.resumen li::before { content: ''; position: absolute; left: 0; top: 0.5em; width: 0.5rem; height: 0.5rem; border-radius: 50%; background: var(--lime); }
+.resumen p { padding-top: 0.8rem; border-top: 1px solid rgba(255, 255, 255, 0.16); font-size: 0.95rem; }
+.resumen a { overflow-wrap: anywhere; }
+.caja { display: grid; gap: 1.25rem; padding: clamp(1.1rem, 3vw, 2rem); border-radius: 24px; background: var(--white); color: var(--ink); box-shadow: 0 30px 70px rgba(4, 16, 36, 0.4); }
+.sobre-navy .caja p { color: var(--muted); }
+.sobre-navy .caja a:not(.btn) { color: var(--teal); }
+.sobre-navy .caja .monto { color: var(--navy); }
+.sobre-navy .caja :focus-visible { outline-color: var(--teal); }
+.regiones { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0.4rem; padding: 0.3rem; border-radius: 16px; background: var(--card); }
+.regiones button { min-height: 3rem; padding: 0.45rem 0.4rem; border: 0; border-radius: 12px; background: transparent; color: var(--navy); font: inherit; font-size: 0.92rem; font-weight: 700; line-height: 1.2; cursor: pointer; }
+.regiones button[aria-selected="true"] { background: var(--navy); color: var(--white); }
+.region { display: grid; gap: 1.1rem; }
+.region + .region { padding-top: 1.25rem; border-top: 1px solid var(--line); }
+.con-pestanas .region + .region { padding-top: 0; border-top: 0; }
+.region-precio { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 0.2rem 1rem; }
+.region-precio h3 { font-size: 1.05rem; font-weight: 700; color: var(--muted); letter-spacing: 0; }
+.region-precio .monto { font-size: clamp(2rem, 5vw, 2.6rem); font-weight: 800; color: var(--navy); line-height: 1.1; letter-spacing: -0.02em; font-variant-numeric: tabular-nums; }
+.metodo { display: grid; gap: 0.7rem; }
+.metodo h4 { margin: 0; font-size: 0.8125rem; font-weight: 700; letter-spacing: 0.09em; text-transform: uppercase; color: var(--teal); }
+.datos-pago { display: grid; border: 1px solid var(--line); border-radius: 14px; overflow: hidden; }
+.dato { display: grid; grid-template-columns: 4.6rem minmax(0, 1fr); gap: 0.6rem; align-items: center; padding: 0.55rem 0.6rem 0.55rem 0.9rem; }
+.dato + .dato { border-top: 1px solid var(--line); }
+.dato dt { font-size: 0.8125rem; font-weight: 700; color: var(--muted); }
+.dato dd { display: flex; align-items: center; justify-content: space-between; gap: 0.6rem; min-width: 0; }
+.dato .valor { min-width: 0; font-weight: 600; color: var(--navy); overflow-wrap: anywhere; line-height: 1.35; font-variant-numeric: tabular-nums; }
+.dato .valor small { display: block; font-weight: 400; font-size: 0.875rem; color: var(--muted); }
+.copiar { flex: none; min-width: 4.9rem; min-height: 2.75rem; padding: 0.3rem 0.7rem; border: 1px solid var(--line); border-radius: 999px; background: var(--paper); color: var(--navy); font: inherit; font-size: 0.875rem; font-weight: 700; cursor: pointer; }
+.copiar:hover { border-color: var(--navy); }
+.copiar.listo { background: var(--lime); border-color: var(--lime); }
+.aviso { padding: 0.75rem 0.95rem; border-radius: 12px; background: var(--card); font-size: 0.95rem; color: var(--ink); line-height: 1.5; }
+.sobre-navy .caja .aviso { color: var(--ink); }
+.caja .btn { width: 100%; }
+.comprobante { display: grid; gap: 0.75rem; padding-top: 1.25rem; border-top: 1px solid var(--line); }
+.comprobante h3 { font-size: 1.1rem; font-weight: 800; color: var(--navy); }
+.correo-fila { display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem 0.75rem; }
+.correo-fila .correo-etiqueta { color: var(--ink); }
+.correo-fila .correo { font-weight: 700; color: var(--navy); overflow-wrap: anywhere; }
+.titular-nota { font-size: 0.92rem; }
+
+/* Preguntas */
+.preguntas .wrap { max-width: 52rem; }
+.faq { border-top: 1px solid var(--line); }
+.faq details { border-bottom: 1px solid var(--line); }
+.faq summary { position: relative; padding: 1.1rem 2.75rem 1.1rem 0; font-weight: 700; font-size: 1.1rem; color: var(--navy); line-height: 1.35; cursor: pointer; list-style: none; }
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary::after { content: ''; position: absolute; right: 0.4rem; top: 50%; width: 0.7rem; height: 0.7rem; border-right: 2.5px solid var(--teal); border-bottom: 2.5px solid var(--teal); transform: translateY(-70%) rotate(45deg); transition: transform 0.2s ease; }
+.faq details[open] summary::after { transform: translateY(-30%) rotate(-135deg); }
+.faq details p { padding: 0 2.75rem 1.25rem 0; color: var(--muted); }
+
+/* Pie */
+.pie { padding-block: clamp(2.5rem, 5vw, 3.5rem); background: var(--navy-deep); color: var(--on-navy-soft); font-size: 0.95rem; }
+.pie .wrap { display: grid; gap: 2rem; }
+.pie-cols { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.5rem 2.5rem; }
+.pie h2 { margin-bottom: 0.5rem; font-size: 0.8125rem; font-weight: 700; letter-spacing: 0.09em; text-transform: uppercase; color: var(--lime); }
+.pie a { color: var(--white); overflow-wrap: anywhere; }
+.pie-base { padding-top: 1.25rem; border-top: 1px solid rgba(255, 255, 255, 0.14); font-size: 0.875rem; }
+
+/* Testimonios, repartidos en la página: un mismo formato discreto en cada lugar */
+.testimonio-linea { display: grid; gap: 0.85rem; max-width: 44rem; margin: 0; padding: 1.3rem 1.5rem 1.3rem 1.4rem; border: 1px solid var(--line); border-left: 4px solid var(--lime); border-radius: 6px var(--radius) var(--radius) 6px; background: var(--white); }
+.testimonio-linea blockquote { display: grid; gap: 0.6rem; margin: 0; }
+.testimonio-linea blockquote p { font-family: var(--serif); font-style: italic; font-size: clamp(1.04rem, 1.35vw, 1.12rem); line-height: 1.55; color: var(--ink); text-wrap: pretty; }
+.testimonio-linea figcaption { font-size: 0.875rem; font-weight: 600; line-height: 1.4; color: var(--teal); }
+.testimonio-linea figcaption strong { font-weight: 800; letter-spacing: 0.03em; }
+.testimonio-etiqueta { display: flex; align-items: center; gap: 0.55rem; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.09em; text-transform: uppercase; color: var(--teal); }
+.testimonio-etiqueta::before { content: ''; flex: none; width: 0.5rem; height: 0.5rem; border-radius: 50%; background: var(--lime); }
+.testimonio-destacado figcaption strong { font-size: 0.95rem; color: var(--navy); }
+.dirigido-texto { grid-column: 1; grid-row: 1; }
+.dirigido .trabajo { grid-column: 2; grid-row: 1; }
+.vivo-grupo { grid-column: 1 / -1; max-width: none; gap: 1.1rem; padding: clamp(1.3rem, 2.6vw, 1.9rem) clamp(1.3rem, 2.8vw, 2.1rem); }
+.vivo-grilla { display: grid; grid-template-columns: minmax(0, 1.45fr) minmax(0, 1fr); gap: clamp(1.25rem, 3vw, 2.5rem); align-items: start; }
+.vivo-item { display: grid; gap: 0.7rem; margin: 0; }
+.vivo-item figcaption strong { font-size: 0.95rem; color: var(--navy); }
+.vivo-cortos { display: grid; gap: 1.1rem; padding-left: clamp(1.25rem, 3vw, 2.5rem); border-left: 1px solid var(--line); }
+.vivo-cortos .vivo-item + .vivo-item { padding-top: 1.1rem; border-top: 1px solid var(--line); }
+.incluye-banda .testimonio-linea { background: var(--paper); }
+.docente-testimonios { grid-column: 1 / -1; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(1rem, 2.2vw, 1.5rem); margin-top: clamp(0.25rem, 1.5vw, 1rem); }
+.docente-testimonios .testimonio-linea { max-width: none; align-content: space-between; }
+.sobre-navy .testimonio-linea { border-color: rgba(255, 255, 255, 0.16); border-left-color: var(--lime); background: rgba(255, 255, 255, 0.06); }
+.sobre-navy .testimonio-linea blockquote p { color: #E4ECF6; }
+.sobre-navy .testimonio-linea figcaption { color: var(--teal-light); }
+
+/* Barra de compra fija (solo en celular) */
+.barra-compra { display: none; }
+
+/* Movimiento sutil atado al desplazamiento; sin soporte o con «reducir movimiento», todo queda fijo */
+@media (prefers-reduced-motion: no-preference) {
+  @supports (animation-timeline: view()) {
+    .seccion .encabezado, .frases li, .dirigido-texto, .trabajo, .busca li, .cita, .sintesis, .modulo, .incluye li, .docente img, .docente-texto, .testimonio-linea, .comprar-texto, .caja, .faq {
+      animation: entrar linear both; animation-timeline: view(); animation-range: entry 0% entry 45%;
+    }
+    .progreso { animation: avanzar linear both; animation-timeline: scroll(root); }
+    @keyframes entrar { from { opacity: 0.3; transform: translateY(24px); } to { opacity: 1; transform: none; } }
+    @keyframes avanzar { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+  }
+}
+
+@media (max-width: 880px) {
+  .incluye { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .menu a:not(.btn) { display: none; }
+  .hero-principal, .dirigido .wrap, .comprar .wrap, .docente .wrap { grid-template-columns: minmax(0, 1fr); }
+  .dirigido-texto, .dirigido .trabajo, .vivo-grupo { grid-column: auto; grid-row: auto; }
+  .ficha { grid-template-columns: repeat(2, minmax(0, 1fr)); row-gap: 0.4rem; }
+  .ficha > div:nth-child(3) { padding-left: 0; border-left: 0; }
+  .ficha .precios { white-space: normal; }
+  .ficha .precios span { display: block; }
+  .ficha .precios span + span::before { content: none; }
+  .docente img { max-width: 16rem; }
+  .pie-cols { grid-template-columns: minmax(0, 1fr); }
+}
+@media (max-width: 720px) {
+  .docente-testimonios { grid-template-columns: minmax(0, 1fr); }
+  .vivo-grilla { grid-template-columns: minmax(0, 1fr); }
+  .vivo-cortos { padding-left: 0; border-left: 0; padding-top: 1.1rem; border-top: 1px solid var(--line); }
+}
+@media (max-width: 640px) {
+  body { font-size: 1rem; }
+  .modulos, .incluye, .busca ul { grid-template-columns: minmax(0, 1fr); }
+  .sintesis ol { grid-template-columns: minmax(0, 1fr); gap: 1.25rem; }
+  .sintesis li { padding-top: 0; padding-left: 3.1rem; min-height: 2.25rem; }
+  .sintesis li:not(:last-child)::after { left: calc(1.125rem - 1px); right: auto; top: 2.5rem; bottom: -1rem; width: 2px; height: auto; }
+  .busca li { text-wrap: wrap; }
+  .incluye li { grid-template-columns: 3.4rem minmax(0, 1fr); column-gap: 0.75rem; }
+  .incluye .cifra { grid-row: span 2; font-size: 3.2rem; }
+  .incluye-foto { grid-column: 2; }
+  .acciones .btn { width: 100%; }
+  .frases li { border-radius: 18px 18px 18px 4px; }
+  .marca span { display: none; }
+  .dato { grid-template-columns: minmax(0, 1fr); gap: 0; }
+  .dato .valor { font-size: 0.93rem; }
+  .copiar { min-width: 4.5rem; }
+  .barra-compra {
+    position: fixed; left: 0; right: 0; bottom: 0; z-index: 30;
+    display: flex; align-items: center; justify-content: space-between; gap: 1rem;
+    padding: 0.7rem var(--gutter) calc(0.7rem + env(safe-area-inset-bottom, 0px));
+    background: var(--navy-deep); color: var(--white); box-shadow: 0 -10px 30px rgba(4, 16, 36, 0.28);
+  }
+  .barra-compra p { display: grid; line-height: 1.25; }
+  .barra-compra span { font-size: 0.8125rem; color: var(--on-navy-soft); }
+  .barra-compra strong { font-size: 1.2rem; font-weight: 800; font-variant-numeric: tabular-nums; }
+  .barra-compra .btn { min-height: 2.9rem; padding: 0.6rem 1.5rem; }
+  .con-barra body { padding-bottom: 4.5rem; }
+  .con-barra .cabecera .btn { display: none; }
+  .con-barra .marca span { display: inline; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { transition-duration: 0.01ms !important; animation-duration: 0.01ms !important; }
+}
+</style>
+</head>
+<body>
+<a class="solo-lectores" href="#comprar">Saltar a la compra</a>
+
+<header class="cabecera">
+  <div class="wrap">
+    <a class="marca" href="https://soysuperdotadoweb.com" aria-label="Soy Superdotado, ir al sitio">
+      <img src="img/logo-soy-superdotado.png" alt="" width="40" height="40">
+      <span>Soy Superdotado</span>
+    </a>
+    <nav class="menu" aria-label="Secciones">
+      <a href="#programa">Programa</a>
+      <a href="#incluye">Material</a>
+      <a href="#docente">Docente</a>
+      <a href="#preguntas">Preguntas</a>
+      <a class="btn btn-navy" href="#comprar">Inscribirme</a>
+    </nav>
+  </div>
+  <div class="progreso" aria-hidden="true"></div>
+</header>
+
+<main>
+
+<section class="hero sobre-navy">
+  <div class="wrap hero-principal">
+    <div class="hero-texto">
+      <p class="etiqueta">Curso asincrónico en video</p>
+      <h1>Sistema inteligente, <em class="acento">Circuito saturado.</em></h1>
+      <p class="hero-tema">Altas capacidades y funcionamiento ejecutivo en adultos</p>
+      <p class="bajada">Un ciclo de prácticas donde la Lic. Gretel Hernández integra psicoeducación, autoobservación y estrategias aplicables a la vida cotidiana, en cuatro módulos que puedes hacer a tu ritmo.</p>
+      <div class="acciones">
+        <a class="btn btn-lime" href="#comprar">Inscribirme
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+        <a class="btn btn-linea" href="#programa">Ver el programa</a>
+      </div>
+    </div>
+    <figure class="hero-clase">
+      <div class="video-marco">
+        <video id="video-presentacion" controls preload="none" playsinline poster="img/presentacion-portada.jpg" width="1280" height="720" aria-label="Video de presentación del ciclo, con la Lic. Gretel Hernández">
+          <source src="video/presentacion.mp4" type="video/mp4">
+          <source src="video/presentacion.webm" type="video/webm">
+        </video>
+        <button class="video-play" type="button" hidden aria-label="Reproducir el video de presentación, de un minuto y medio">
+          <span class="video-icono" aria-hidden="true"></span>
+        </button>
+      </div>
+      <figcaption>Así empieza el ciclo · Presentación de la Lic.&nbsp;Gretel Hernández · 1&nbsp;min&nbsp;30&nbsp;s</figcaption>
+    </figure>
+  </div>
+  <div class="wrap">
+    <dl class="ficha">
+      <div><dt>Modalidad</dt><dd>En video, sin fechas ni horarios<span class="nota">Acceso por 60 días</span><span class="nota">Requiere cuenta de Google</span></dd></div>
+      <div><dt>Contenido</dt><dd>4 módulos y 1&nbsp;práctica&nbsp;guiada<span class="nota">1 h 50 min en total</span></dd></div>
+      <div><dt>Material de trabajo</dt><dd>4 hojas de ruta con ejercicios<span class="nota">y la rueda de funciones ejecutivas, en PDF para descargar</span></dd></div>
+      <div><dt>Valor</dt><dd><span class="precios"><span data-precio="ar">ARS 95.000</span><span data-precio="lat">USD 80</span><span data-precio="eu">EUR 80</span></span><span class="nota">Según la región</span></dd></div>
+    </dl>
+  </div>
+</section>
+
+<section class="seccion suena" id="te-suena" aria-labelledby="t-suena">
+  <div class="wrap">
+    <div class="encabezado">
+      <p class="etiqueta">¿Te suena?</p>
+      <h2 id="t-suena">«Si eres tan inteligente, ¿cómo no puedes con esto?»</h2>
+      <p class="bajada">Muchas personas con altas capacidades escucharon esa pregunta, o se la hicieron a sí mismas. Suele venir con expresiones como estas:</p>
+    </div>
+    <ul class="frases">
+      <li>«Entiendo todo, pero no arranco.»</li>
+      <li>«Tengo miles de ideas, pero no sé por cuál empezar.»</li>
+      <li>«Pienso demasiado y actúo poco.»</li>
+      <li>«Todo lo veo interesante y me disperso.»</li>
+      <li>«Lo complejo me entusiasma, lo simple me traba.»</li>
+    </ul>
+  </div>
+</section>
+
+<section class="seccion dirigido sin-aire" id="para-quien" aria-labelledby="t-quien">
+  <div class="wrap">
+    <div class="dirigido-texto">
+      <h2 id="t-quien">¿A quién va dirigido?</h2>
+      <p>Un recorrido para adultos con altas capacidades que quieren comprender sus funciones ejecutivas y construir estrategias reales para organizarse, regularse y funcionar mejor.</p>
+      <p>A través de psicoeducación, autoexploración del propio perfil y un abordaje sensible a la intensidad cognitiva y emocional, este ciclo propone pasar de la culpa y la confusión a una comprensión más clara, estratégica y amable del propio funcionamiento.</p>
+      <p class="para-ti">Si te cuesta iniciar tareas, sostener el foco, organizarte o mantener constancia, y sientes que tu mente funciona de un modo que pocas personas entienden, este ciclo es para ti.</p>
+    </div>
+    <div class="testimonio-linea vivo-grupo">
+      <p class="testimonio-etiqueta">Participantes del ciclo en vivo</p>
+      <div class="vivo-grilla">
+        <figure class="vivo-item">
+          <blockquote>
+            <p>«Los encuentros en vivo me permitieron conocerme más, identificarme y conectar con otros adultos que se enfrentan a desafíos similares a los míos.</p>
+            <p>Con la información y material que se nos brindó pude encontrar y poner en práctica nuevas estrategias para organizar mis tiempos de una mejor manera en varios aspectos de mi vida. Agradezco que se den este tipo de encuentros que nos hacen sentir acompañados.»</p>
+          </blockquote>
+          <figcaption><strong>A. G. P. O.</strong></figcaption>
+        </figure>
+        <div class="vivo-cortos">
+          <figure class="vivo-item">
+            <blockquote><p>«…material altamente rico para consulta personal permanente.»</p></blockquote>
+            <figcaption><strong>A. G.</strong></figcaption>
+          </figure>
+          <figure class="vivo-item">
+            <blockquote><p>«Muchas gracias por todo, está siendo muy interesante y enriquecedor.»</p></blockquote>
+            <figcaption><strong>E. D. M.</strong></figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+    <div class="trabajo">
+      <h3>¿Qué vas a trabajar?</h3>
+      <ul class="funciones">
+        <li>Iniciativa e inicio de tarea</li>
+        <li>Planificación y organización</li>
+        <li>Memoria de trabajo</li>
+        <li>Control inhibitorio</li>
+        <li>Flexibilidad cognitiva</li>
+        <li>Gestión del tiempo</li>
+        <li>Persistencia y atención sostenida</li>
+        <li class="transversal">Regulación emocional<span>Eje transversal de todo el recorrido</span></li>
+      </ul>
+      <p class="nota">También vas a explorar tu propio perfil con la rueda de funciones ejecutivas, para identificar fortalezas, puntos de sobrecarga y áreas de mayor vulnerabilidad.</p>
+    </div>
+    <div class="busca">
+      <h3>Qué busca el ciclo</h3>
+      <ul>
+        <li>Menos bloqueo, dispersión y postergación.</li>
+        <li>Más foco, organización y flexibilidad.</li>
+        <li>Estrategias concretas para iniciar, planificar y sostener tareas.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="cita-banda sobre-navy" aria-label="Palabras de la docente">
+  <div class="wrap">
+    <figure class="cita">
+      <blockquote><p>«Este ciclo no es un curso de productividad ni de organización personal. Es más bien un espacio para entender cómo funciona tu mente.»</p></blockquote>
+      <figcaption>
+        <img src="img/gretel-retrato.jpg" alt="" width="240" height="240" loading="lazy" decoding="async">
+        <span><strong>Lic. Gretel Hernández</strong>En la apertura del ciclo</span>
+      </figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="seccion" id="programa" aria-labelledby="t-programa">
+  <div class="wrap">
+    <div class="encabezado">
+      <h2 id="t-programa">Cuatro módulos: de entender a diseñar tus apoyos.</h2>
+      <p class="bajada">Cada módulo combina explicación, ejemplos y actividades para pausar el video y hacerlas con tu hoja de ruta.</p>
+    </div>
+    <div class="sintesis">
+      <h3>El recorrido, en síntesis</h3>
+      <ol>
+        <li><strong>Comprender el desbalance</strong><span>La brecha entre potencial y funcionamiento.</span></li>
+        <li><strong>Pasar de la intención a la acción</strong><span>De pensar a empezar y avanzar.</span></li>
+        <li><strong>Sostener sin colapsar</strong><span>Persistencia sin agotamiento.</span></li>
+        <li><strong>Administrar y cuidar el propio sistema</strong><span>Flexibilidad, tiempo y autocuidado.</span></li>
+      </ol>
+    </div>
+    <ol class="modulos">
+      <li class="modulo">
+        <img src="img/modulo-1.jpg" alt="Portada del módulo 1, «La mente que no para», con la Lic. Gretel Hernández en cámara." width="960" height="540" loading="lazy" decoding="async">
+        <p class="modulo-meta">Módulo 1 <span class="duracion">21 min</span></p>
+        <h3>La mente que no para</h3>
+        <p class="modulo-logro">¿Quién soy y qué me pasa?</p>
+        <details class="modulo-mas">
+          <summary>Ver contenidos</summary>
+          <p>La alta capacidad como experiencia interna, el desarrollo asincrónico que persiste en la adultez y qué son las funciones ejecutivas. Por qué una inteligencia elevada no garantiza que funcionen bien.</p>
+          <p class="actividad">Tu hoja de ruta incluye varias actividades para hacer durante el video y después.</p>
+        </details>
+      </li>
+      <li class="modulo">
+        <img src="img/modulo-2.jpg" alt="Portada del módulo 2, «Empezar y sostener», con la Lic. Gretel Hernández en cámara." width="960" height="540" loading="lazy" decoding="async">
+        <p class="modulo-meta">Módulo 2 <span class="duracion">20 min</span></p>
+        <h3>Empezar y sostener</h3>
+        <p class="modulo-logro">Inicio de tareas, activación, memoria de trabajo y tiempo.</p>
+        <details class="modulo-mas">
+          <summary>Ver contenidos</summary>
+          <p>Por qué el inicio depende de la activación (interés, desafío, urgencia o significado) y no solo de la voluntad, y por qué los sistemas de organización genéricos no suelen funcionar.</p>
+          <p class="actividad">Tu hoja de ruta incluye varias actividades para hacer durante el video y después.</p>
+        </details>
+      </li>
+      <li class="modulo">
+        <img src="img/modulo-3.jpg" alt="Portada del módulo 3, «Pensar y sentir», con la Lic. Gretel Hernández en cámara." width="960" height="540" loading="lazy" decoding="async">
+        <p class="modulo-meta">Módulo 3 <span class="duracion">27 min</span></p>
+        <h3>Pensar y sentir</h3>
+        <p class="modulo-logro">Sobreexcitabilidad emocional, perfeccionismo, inhibición y flexibilidad.</p>
+        <p class="modulo-extra">Incluye una práctica guiada de atención plena (9&nbsp;min 45&nbsp;s).</p>
+        <details class="modulo-mas">
+          <summary>Ver contenidos</summary>
+          <p>La intensidad emocional como parte del perfil, su impacto en el funcionamiento ejecutivo y estrategias de regulación adaptadas a tu forma de procesar.</p>
+          <p class="actividad">Tu hoja de ruta incluye varias actividades para hacer durante el video y después.</p>
+        </details>
+      </li>
+      <li class="modulo">
+        <img src="img/modulo-4.jpg" alt="Portada del módulo 4, «Del autoconocimiento al diseño de apoyos», con la Lic. Gretel Hernández en cámara." width="960" height="540" loading="lazy" decoding="async">
+        <p class="modulo-meta">Módulo 4 <span class="duracion">32 min</span></p>
+        <h3>Del autoconocimiento al diseño de apoyos</h3>
+        <p class="modulo-logro">Planificación y organización, persistencia y atención sostenida. Integración: rueda de funciones ejecutivas.</p>
+        <details class="modulo-mas">
+          <summary>Ver contenidos</summary>
+          <p>Herramientas para ordenar un proyecto en pasos posibles y sostener la atención sin depender del entusiasmo o la urgencia.</p>
+          <p class="actividad">Tu hoja de ruta incluye varias actividades, y la integración final se hace con la rueda de funciones ejecutivas.</p>
+        </details>
+      </li>
+    </ol>
+    <figure class="testimonio-linea">
+      <blockquote><p>«Querida Gretel, como te lo he mencionado en otra oportunidad, tus talleres son como pequeños libros virtuales que quisiera tener a mano siempre. Llenos de tips, consejos y experiencias.»</p></blockquote>
+      <figcaption>Participante de talleres anteriores</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="seccion incluye-banda" id="incluye" aria-labelledby="t-incluye">
+  <div class="wrap">
+    <div class="encabezado">
+      <h2 id="t-incluye">Material del ciclo</h2>
+    </div>
+    <ul class="incluye">
+      <li>
+        <span class="cifra" aria-hidden="true">4</span>
+        <h3>Módulos en video</h3>
+        <p>1 h 41 min en total, con la Lic. Gretel Hernández en cámara y diapositivas. Cada módulo dura entre 20 y 32 minutos.</p>
+      </li>
+      <li>
+        <span class="cifra" aria-hidden="true">4</span>
+        <h3>Hojas de ruta en PDF</h3>
+        <p>Una por módulo: un repaso de lo trabajado en el video y los ejercicios de reflexión y aplicación personal. Puedes imprimirlas o completarlas en la pantalla.</p>
+      </li>
+      <li>
+        <span class="cifra" aria-hidden="true">1</span>
+        <h3>Rueda de funciones ejecutivas</h3>
+        <p>En PDF. Se completa con el video del módulo 4, con la guía de la Lic. Gretel Hernández.</p>
+      </li>
+      <li>
+        <span class="cifra" aria-hidden="true">1</span>
+        <h3>Práctica de atención plena</h3>
+        <p>Una práctica de integración en video, de 9&nbsp;min 45&nbsp;s, incluida en el módulo 3.</p>
+      </li>
+    </ul>
+    <figure class="testimonio-linea">
+      <blockquote><p>«Soy de Brasil y veo que sus aportes son muy avanzados, claros y valiosos para quien participa. ¡Me gustó bastante! Los pioneros en Latinoamérica, por lo que he buscado todos estos años sobre este tema.»</p></blockquote>
+      <figcaption>Participante de talleres anteriores, desde Brasil</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="seccion docente" id="docente" aria-labelledby="t-docente">
+  <div class="wrap">
+    <img src="img/gretel-hernandez.jpg" alt="Lic. Gretel Hernández" width="705" height="637" loading="lazy" decoding="async">
+    <div class="docente-texto">
+      <p class="etiqueta">Docente</p>
+      <div class="docente-nombre">
+        <h2 id="t-docente">Lic. Gretel Hernández</h2>
+        <p>Psicóloga clínica · MP 81977</p>
+      </div>
+      <p>Especializada en la identificación y la atención psicoterapéutica de personas con altas capacidades y otras neurodivergencias.</p>
+      <ul class="credenciales">
+        <li>Psicóloga clínica (UCA, Argentina), con orientación cognitivo-conductual y enfoque familiar, informado en trauma.</li>
+        <li>Experta universitaria en intervención psicoeducativa en altas capacidades (CEU Cardenal Herrera, España).</li>
+        <li>Integra el Directorio de Proveedores de Salud Mental de SENG, Supporting Emotional Needs of the Gifted (EE. UU.).</li>
+        <li>Profesora de enseñanza secundaria, normal y especial en Psicología (UCA), con experiencia docente universitaria.</li>
+      </ul>
+      <p>Selección de contenidos y diseño del ciclo: Lic. Gretel Hernández y Federico Nicolás Ayala Handji, Soy Superdotado.</p>
+    </div>
+    <div class="docente-testimonios">
+      <figure class="testimonio-linea">
+        <blockquote><p>«Participé en tres talleres y encontré lo que buscaba. La Lic. Gretel transmite sus conocimientos de una manera cercana, sencilla, clara y práctica. Me han ayudado muchísimo sus consejos para nuestra vida familiar. Sumamente agradecida por el espacio, y recomiendo a otros que se animen a participar en estos encuentros de sumo valor.»</p></blockquote>
+        <figcaption>Participante de tres talleres de la Lic. Gretel Hernández</figcaption>
+      </figure>
+      <figure class="testimonio-linea">
+        <blockquote><p>«Entrega, claridad y mucha dedicación, pero sin lugar a dudas la calidad humana que acompaña toda la asertividad de los datos, experiencias e investigación es lo que hace de sus aportes algo invaluable e indispensable. ¡Gracias, Gretel!»</p></blockquote>
+        <figcaption>Participante de talleres anteriores</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section class="seccion sobre-navy comprar" id="comprar" aria-labelledby="t-comprar">
+  <div class="wrap">
+    <div class="comprar-texto">
+      <h2 id="t-comprar">Inscripción y acceso</h2>
+      <ol class="pasos" id="pasos-manual">
+        <li><strong>Elige tu región y paga</strong><span>Transferencia en Argentina, PayPal en el resto de América, PayPal o transferencia SEPA en Europa.</span></li>
+        <li><strong>Completa el formulario</strong><span>Con tu cuenta de Google (Gmail o institucional): tus datos y el comprobante de pago adjunto. Al enviarlo recibes una confirmación por correo.</span></li>
+        <li><strong>Recibes el acceso</strong><span>En un máximo de 24 horas te llega por correo el enlace de Google Drive con los videos y el material. Si no lo ves, revisa Spam y Promociones.</span></li>
+      </ol>
+      <div class="aviso-gmail" role="note">
+        <p><strong>Importante: necesitas una cuenta de Google</strong></p>
+        <p>El material se ve en Google Drive. Sirve una cuenta de <strong>Gmail</strong> o un <strong>correo institucional que se abre con Gmail</strong>, como el de muchas universidades. Si tu correo es de Hotmail, Outlook, Yahoo u otro servicio, <a href="https://accounts.google.com/signup" target="_blank" rel="noopener">crea una cuenta de Gmail gratis aquí</a> antes de inscribirte; lleva dos minutos.</p>
+      </div>
+      <ol class="pasos" id="pasos-auto" hidden>
+        <li><strong>Elige tu región</strong><span>El precio se muestra en tu moneda.</span></li>
+        <li><strong>Paga en línea</strong><span>En la plataforma de pago, con los medios disponibles en tu país.</span></li>
+        <li><strong>Recibes el acceso al instante</strong><span>Te llega por correo apenas se confirma el pago.</span></li>
+      </ol>
+      <div class="resumen">
+        <h3>Qué recibes</h3>
+        <ul>
+          <li>4 módulos en video</li>
+          <li>1 práctica guiada de atención plena en video</li>
+          <li>4 hojas de ruta en PDF, con resumen y ejercicios</li>
+          <li>Rueda de funciones ejecutivas en PDF</li>
+          <li>Acceso a los videos por 60 días; los PDF se descargan y quedan para ti</li>
+        </ul>
+        <p>Consultas: <a href="mailto:infocursosoysd@gmail.com">infocursosoysd@gmail.com</a></p>
+      </div>
+    </div>
+
+    <div class="caja" id="caja-compra">
+      <div class="regiones" role="tablist" aria-label="Tu región" id="regiones" hidden>
+        <button type="button" role="tab" id="tab-ar" aria-controls="region-ar" aria-selected="true">Argentina</button>
+        <button type="button" role="tab" id="tab-lat" aria-controls="region-lat" aria-selected="false" tabindex="-1">América y EE.&nbsp;UU.</button>
+        <button type="button" role="tab" id="tab-eu" aria-controls="region-eu" aria-selected="false" tabindex="-1">Europa</button>
+      </div>
+
+      <div class="region" id="region-ar" role="tabpanel" aria-labelledby="tab-ar" data-region="ar">
+        <div class="region-precio">
+          <h3>Argentina</h3>
+          <p class="monto" data-precio="ar">ARS 95.000</p>
+        </div>
+        <div class="manual">
+          <div class="metodo">
+            <h4>Transferencia bancaria</h4>
+            <dl class="datos-pago">
+              <div class="dato"><dt>Alias</dt><dd><span class="valor">cursosd</span><button class="copiar" type="button" data-copiar="cursosd" aria-label="Copiar alias">Copiar</button></dd></div>
+              <div class="dato"><dt>CVU</dt><dd><span class="valor">0000003100091638734429</span><button class="copiar" type="button" data-copiar="0000003100091638734429" aria-label="Copiar CVU">Copiar</button></dd></div>
+              <div class="dato"><dt>Titular</dt><dd><span class="valor">Federico Nicolás Ayala Handji<small>CUIL 20-25613786-1</small></span><button class="copiar" type="button" data-copiar="Federico Nicolás Ayala Handji" aria-label="Copiar titular">Copiar</button></dd></div>
+            </dl>
+          </div>
+        </div>
+        <div class="auto" hidden><a class="btn btn-navy" data-checkout="ar" href="#comprar" target="_blank" rel="noopener">Comprar ahora</a></div>
+      </div>
+
+      <div class="region" id="region-lat" role="tabpanel" aria-labelledby="tab-lat" data-region="lat">
+        <div class="region-precio">
+          <h3>Latinoamérica y EE.&nbsp;UU.</h3>
+          <p class="monto" data-precio="lat">USD 80</p>
+        </div>
+        <div class="manual">
+          <div class="metodo">
+            <h4>PayPal</h4>
+            <a class="btn btn-navy" data-paypal="lat" href="https://www.paypal.com/paypalme/soysuperdotado/80USD" target="_blank" rel="noopener">Pagar USD 80 con PayPal</a>
+          </div>
+        </div>
+        <div class="auto" hidden><a class="btn btn-navy" data-checkout="lat" href="#comprar" target="_blank" rel="noopener">Comprar ahora</a></div>
+      </div>
+
+      <div class="region" id="region-eu" role="tabpanel" aria-labelledby="tab-eu" data-region="eu">
+        <div class="region-precio">
+          <h3>Europa</h3>
+          <p class="monto" data-precio="eu">EUR 80</p>
+        </div>
+        <div class="manual">
+          <div class="metodo">
+            <h4>PayPal</h4>
+            <a class="btn btn-navy" data-paypal="eu" href="https://www.paypal.com/paypalme/soysuperdotado/80EUR" target="_blank" rel="noopener">Pagar EUR 80 con PayPal</a>
+          </div>
+          <div class="metodo" style="margin-top: 1.1rem">
+            <h4>O transferencia SEPA</h4>
+            <dl class="datos-pago">
+              <div class="dato"><dt>IBAN</dt><dd><span class="valor">MT25CFTE28004000000000005439757</span><button class="copiar" type="button" data-copiar="MT25CFTE28004000000000005439757" aria-label="Copiar IBAN">Copiar</button></dd></div>
+              <div class="dato"><dt>BIC</dt><dd><span class="valor">CFTEMTM1XXX</span><button class="copiar" type="button" data-copiar="CFTEMTM1XXX" aria-label="Copiar BIC">Copiar</button></dd></div>
+              <div class="dato"><dt>Titular</dt><dd><span class="valor">Federico Nicolas Ayala Handji<small>OpenPayd Financial Services Malta Ltd · IBAN virtual</small></span><button class="copiar" type="button" data-copiar="Federico Nicolas Ayala Handji" aria-label="Copiar titular">Copiar</button></dd></div>
+            </dl>
+            <p class="aviso">Solo transferencias SEPA, dentro de la Unión Europea. No se pueden recibir transferencias SWIFT.</p>
+          </div>
+        </div>
+        <div class="auto" hidden><a class="btn btn-navy" data-checkout="eu" href="#comprar" target="_blank" rel="noopener">Comprar ahora</a></div>
+      </div>
+
+      <div class="comprobante" id="comprobante">
+        <h3>Después de pagar, completa el formulario</h3>
+        <p>Ingresa con tu cuenta de Google, completa tus datos y adjunta el comprobante. El acceso se habilita para esa misma cuenta, dentro de las 24 horas. Si no ves nuestro correo en tu bandeja de entrada, revisa las carpetas Spam y Promociones.</p>
+        <a class="btn btn-lime" id="btn-formulario" href="https://docs.google.com/forms/d/e/1FAIpQLSfEWyaTYU3SJ4J09mP3fvgbXJq3oJ3yYHT5J3ZJbJF-37hhSg/viewform" target="_blank" rel="noopener">Completar el formulario de inscripción</a>
+        <div class="correo-fila">
+          <span class="correo-etiqueta">Consultas:</span>
+          <span class="correo" id="correo-texto">infocursosoysd@gmail.com</span>
+          <button class="copiar" type="button" id="copiar-correo" data-copiar="infocursosoysd@gmail.com" aria-label="Copiar la dirección de correo">Copiar</button>
+        </div>
+        <p class="titular-nota">Los pagos se reciben a nombre de Federico Nicolás Ayala Handji, coautor del ciclo.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="seccion preguntas" id="preguntas" aria-labelledby="t-preguntas">
+  <div class="wrap">
+    <div class="encabezado">
+      <h2 id="t-preguntas">Preguntas frecuentes</h2>
+    </div>
+    <div class="faq">
+      <details>
+        <summary>¿Necesito una evaluación formal de altas capacidades?</summary>
+        <p>No. El ciclo está pensado tanto para adultos que sospechan tener altas capacidades como para quienes ya cuentan con una identificación formal.</p>
+      </details>
+      <details>
+        <summary>¿Esto es terapia?</summary>
+        <p>No. Es una propuesta psicoeducativa: explica cómo funcionan las habilidades ejecutivas en las altas capacidades y ofrece herramientas concretas. No sustituye un proceso terapéutico. Si estás en tratamiento, puedes llevar lo trabajado a tu sesión.</p>
+      </details>
+      <details>
+        <summary>¿Cómo y cuándo recibo el acceso?</summary>
+        <p>Después de completar el formulario recibes por correo, en un máximo de 24 horas, el enlace de Google Drive con todo el material. El correo llega desde infocursosoysd@gmail.com.</p>
+      </details>
+      <details>
+        <summary>¿Qué hago si no me llega el correo?</summary>
+        <p>Revisa las carpetas Spam y Promociones de tu correo: a veces los mensajes con enlaces terminan ahí. Para evitarlo, agrega infocursosoysd@gmail.com a tus contactos. Si pasaron más de 24 horas desde que completaste el formulario y no lo encuentras, escríbenos a <a href="mailto:infocursosoysd@gmail.com">infocursosoysd@gmail.com</a> y te lo reenviamos.</p>
+      </details>
+      <details>
+        <summary>¿Por cuánto tiempo tengo acceso?</summary>
+        <p>Durante 60 días desde que recibes el acceso. Las hojas de ruta y la rueda de funciones ejecutivas puedes descargarlas: quedan para ti aunque venza el acceso a los videos.</p>
+      </details>
+      <details>
+        <summary>¿Qué necesito para acceder?</summary>
+        <p>Una cuenta de Google y conexión a internet. Sirve un Gmail o un correo institucional que se abre con Gmail. Con correos de Hotmail, Outlook o Yahoo no es posible acceder; en ese caso puedes crear un Gmail gratuito. Algunas instituciones bloquean los archivos compartidos desde fuera; si no puedes abrir el material con tu correo institucional, usa un Gmail personal.</p>
+      </details>
+      <details>
+        <summary>¿En qué se diferencia de la versión en vivo?</summary>
+        <p>El contenido y los materiales son los mismos. No hay intercambio grupal ni horarios: puedes ver cada módulo cuando quieras y pausarlo para hacer las actividades.</p>
+      </details>
+      <details>
+        <summary>¿Cuánto tiempo necesito?</summary>
+        <p>Cada módulo dura entre 20 y 32 minutos, más el tiempo de las actividades. Avanza a tu ritmo, pero sin prisa: te aconsejamos dedicar una semana a cada módulo para poner en práctica lo aprendido en tu vida diaria antes de pasar al siguiente.</p>
+      </details>
+      <details>
+        <summary>¿Puedo compartir el acceso?</summary>
+        <p>El acceso es personal. Los videos y los materiales están protegidos por derechos de propiedad intelectual y no pueden reproducirse ni compartirse.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<div class="barra-compra" id="barra-compra" hidden>
+  <p><span>Ciclo completo</span><strong id="barra-precio" data-precio="ar">ARS 95.000</strong></p>
+  <a class="btn btn-lime" href="#comprar">Comprar</a>
+</div>
+
+<footer class="pie">
+  <div class="wrap">
+    <div class="pie-cols">
+      <div>
+        <h2>Soy Superdotado</h2>
+        <p>Acompañamos a personas inteligentes, sensibles y divergentes a lo largo de su ciclo vital.</p>
+        <p><a href="https://soysuperdotadoweb.com">soysuperdotadoweb.com</a></p>
+      </div>
+      <div>
+        <h2>Contacto</h2>
+        <p>Consultas sobre el ciclo:<br><a href="mailto:infocursosoysd@gmail.com">infocursosoysd@gmail.com</a></p>
+      </div>
+      <div>
+        <h2>Una aclaración</h2>
+        <p>Este ciclo no sustituye un proceso terapéutico. Si atraviesas una crisis o un momento de mucho malestar, busca acompañamiento profesional en tu zona.</p>
+      </div>
+    </div>
+    <p class="pie-base">© 2026 Soysuperdotadoweb · Lic. Gretel Hernández y Federico Nicolás Ayala Handji · Se reservan los derechos de propiedad intelectual.</p>
+  </div>
+</footer>
+
+<script>
+/* ─────────────────────────────────────────────────────────────
+   CONFIGURACIÓN — lo único que hace falta tocar para actualizar
+   precios o pasar a cobro automático.
+
+   · precio: el texto que se muestra en toda la página.
+   · paypal: enlace de PayPal de esa región (vacío si no aplica).
+   · formulario: enlace del formulario de inscripción (Google Forms).
+   · checkout: enlace de pago de una plataforma que entregue el
+     acceso sola (Tiendup, Hotmart, Payhip…). Si lo completas, esa
+     región deja de mostrar los datos de transferencia y muestra
+     un único botón «Comprar ahora» hacia ese enlace.
+   ───────────────────────────────────────────────────────────── */
+var CONFIG = {
+  correo: 'infocursosoysd@gmail.com',
+  formulario: 'https://docs.google.com/forms/d/e/1FAIpQLSfEWyaTYU3SJ4J09mP3fvgbXJq3oJ3yYHT5J3ZJbJF-37hhSg/viewform',
+  curso: 'Altas capacidades y funcionamiento ejecutivo',
+  regiones: {
+    ar:  { precio: 'ARS 95.000', paypal: '', checkout: '' },
+    lat: { precio: 'USD 80', paypal: 'https://www.paypal.com/paypalme/soysuperdotado/80USD', checkout: '' },
+    eu:  { precio: 'EUR 80', paypal: 'https://www.paypal.com/paypalme/soysuperdotado/80EUR', checkout: '' }
+  }
+};
+
+(function () {
+  'use strict';
+  var $ = function (s, r) { return (r || document).querySelector(s); };
+  var $$ = function (s, r) { return Array.prototype.slice.call((r || document).querySelectorAll(s)); };
+
+  /* ── Precios y enlaces desde CONFIG ── */
+  var claves = Object.keys(CONFIG.regiones);
+  claves.forEach(function (k) {
+    var r = CONFIG.regiones[k];
+    $$('[data-precio="' + k + '"]').forEach(function (el) { el.textContent = r.precio; });
+    $$('[data-paypal="' + k + '"]').forEach(function (el) {
+      if (r.paypal) { el.href = r.paypal; el.textContent = 'Pagar ' + r.precio + ' con PayPal'; }
+    });
+    var panel = $('[data-region="' + k + '"]');
+    if (panel && r.checkout) {
+      $('.manual', panel).hidden = true;
+      $('.auto', panel).hidden = false;
+      var a = $('[data-checkout]', panel);
+      a.href = r.checkout;
+      a.textContent = 'Comprar ahora · ' + r.precio;
+    }
+  });
+  var todasAuto = claves.every(function (k) { return !!CONFIG.regiones[k].checkout; });
+  if (todasAuto) {
+    $('#pasos-manual').hidden = true;
+    $('#pasos-auto').hidden = false;
+    $('#comprobante').hidden = true;
+  }
+
+  /* ── Formulario de inscripción ── */
+  var btnForm = $('#btn-formulario');
+  if (btnForm && CONFIG.formulario) btnForm.href = CONFIG.formulario;
+  $('#correo-texto').textContent = CONFIG.correo;
+  $('#copiar-correo').setAttribute('data-copiar', CONFIG.correo);
+
+  /* ── Botones «Copiar» ── */
+  function marcar(btn) {
+    var antes = btn.getAttribute('data-texto') || btn.textContent;
+    btn.setAttribute('data-texto', antes);
+    btn.textContent = 'Copiado';
+    btn.classList.add('listo');
+    setTimeout(function () { btn.textContent = antes; btn.classList.remove('listo'); }, 1800);
+  }
+  function seleccionar(btn) {
+    var destino = btn.parentNode.querySelector('.valor, .correo');
+    if (!destino) return;
+    var rango = document.createRange();
+    rango.selectNodeContents(destino);
+    var sel = window.getSelection();
+    sel.removeAllRanges();
+    sel.addRange(rango);
+  }
+  $$('.copiar').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var texto = btn.getAttribute('data-copiar');
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(texto).then(function () { marcar(btn); }, function () { seleccionar(btn); });
+      } else {
+        seleccionar(btn);
+      }
+    });
+  });
+
+  /* ── Pestañas de región ── */
+  var lista = $('#regiones');
+  var tabs = $$('[role="tab"]', lista);
+  function elegir(k, foco) {
+    tabs.forEach(function (t) {
+      var activa = t.id === 'tab-' + k;
+      t.setAttribute('aria-selected', activa ? 'true' : 'false');
+      t.tabIndex = activa ? 0 : -1;
+      $('#' + t.getAttribute('aria-controls')).hidden = !activa;
+      if (activa && foco) t.focus();
+    });
+    var enBarra = $('#barra-precio');
+    if (enBarra && CONFIG.regiones[k]) enBarra.textContent = CONFIG.regiones[k].precio;
+  }
+  function regionPorZona() {
+    try {
+      var z = Intl.DateTimeFormat().resolvedOptions().timeZone || '';
+      if (z.indexOf('America/Argentina') === 0 || z === 'America/Buenos_Aires') return 'ar';
+      if (z.indexOf('Europe/') === 0 || z.indexOf('Atlantic/Canary') === 0) return 'eu';
+      if (z.indexOf('America/') === 0) return 'lat';
+    } catch (e) {}
+    return 'ar';
+  }
+  lista.hidden = false;
+  $('#caja-compra').classList.add('con-pestanas');
+  tabs.forEach(function (t, i) {
+    t.addEventListener('click', function () { elegir(t.id.replace('tab-', '')); });
+    t.addEventListener('keydown', function (e) {
+      var d = e.key === 'ArrowRight' ? 1 : e.key === 'ArrowLeft' ? -1 : 0;
+      if (!d) return;
+      e.preventDefault();
+      var sig = tabs[(i + d + tabs.length) % tabs.length];
+      elegir(sig.id.replace('tab-', ''), true);
+    });
+  });
+  elegir(regionPorZona());
+
+  /* ── Video de presentación: portada con botón propio; los controles aparecen al reproducir ── */
+  var video = $('#video-presentacion'), play = $('.video-play');
+  if (video && play) {
+    video.controls = false;
+    play.hidden = false;
+    play.addEventListener('click', function () {
+      play.hidden = true;
+      video.controls = true;
+      var p = video.play();
+      if (p && p.catch) p.catch(function () {});
+    });
+  }
+
+  /* ── Barra de compra fija en celular: aparece al pasar la presentación y se oculta al llegar a la inscripción ── */
+  var barra = $('#barra-compra');
+  if (barra && 'IntersectionObserver' in window) {
+    document.documentElement.classList.add('con-barra');
+    var primerBoton = $('.acciones .btn'), compra = $('#comprar');
+    var aLaVista = { arriba: true, compra: false };
+    var mirar = new IntersectionObserver(function (entradas) {
+      entradas.forEach(function (e) {
+        if (e.target === primerBoton) aLaVista.arriba = e.isIntersecting; else aLaVista.compra = e.isIntersecting;
+      });
+      barra.hidden = aLaVista.arriba || aLaVista.compra;
+    });
+    mirar.observe(primerBoton);
+    mirar.observe(compra);
+  }
+
+})();
+</script>
+</body>
+</html>

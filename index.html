@@ -393,6 +393,21 @@ h2 { font-size: clamp(1.75rem, 3.4vw, 2.6rem); font-weight: 800; line-height: 1.
   html { scroll-behavior: auto; }
   *, *::before, *::after { transition-duration: 0.01ms !important; animation-duration: 0.01ms !important; }
 }
+
+/* ── Beneficio del ciclo en vivo (solo con ?beneficio=vivo y hasta la fecha límite) ── */
+.beneficio-franja { background: var(--lime); color: var(--navy-deep); }
+.beneficio-franja .wrap { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 0.35rem 1rem; padding-block: 0.6rem; font-size: 0.95rem; line-height: 1.4; text-align: center; }
+.beneficio-franja strong { font-weight: 800; }
+.beneficio-franja a { color: var(--navy-deep); font-weight: 700; }
+.beneficio-caja { display: grid; gap: 0.25rem; padding: 0.85rem 1rem; border-radius: 14px; background: rgba(178, 220, 58, 0.18); border: 1px solid rgba(178, 220, 58, 0.9); }
+.sobre-navy .caja .beneficio-caja p { color: var(--ink); font-size: 0.95rem; line-height: 1.45; }
+.sobre-navy .caja .beneficio-caja .beneficio-titulo { font-weight: 800; color: var(--navy); font-size: 1rem; }
+.precio-antes { display: block; font-size: 0.95rem; font-weight: 600; color: var(--muted); text-decoration: line-through; letter-spacing: 0; text-align: right; }
+.ficha .precio-antes, .barra-compra .precio-antes { display: inline; font-size: 0.8em; margin-right: 0.35em; color: inherit; opacity: 0.7; }
+.con-beneficio .ficha .precios { white-space: normal; }
+.con-beneficio .ficha .precios > span { display: block; }
+.con-beneficio .ficha .precios > span + span::before { content: none; }
+.sobre-navy .caja .modalidad-nota { padding: 0.7rem 0.9rem; border-radius: 12px; background: var(--card); color: var(--ink); font-size: 0.95rem; line-height: 1.45; }
 </style>
 </head>
 <body>
@@ -875,6 +890,22 @@ var CONFIG = {
     ar:  { precio: 'ARS 95.000', paypal: '', checkout: '' },
     lat: { precio: 'USD 80', paypal: 'https://www.paypal.com/paypalme/soysuperdotado/80USD', checkout: '' },
     eu:  { precio: 'EUR 80', paypal: 'https://www.paypal.com/paypalme/soysuperdotado/80EUR', checkout: '' }
+  },
+
+  /* Beneficio para participantes del ciclo en vivo.
+     Solo se ve entrando con la dirección …/circuito-saturado/?beneficio=vivo
+     y solo hasta la fecha «hasta». Pasada esa fecha, la página vuelve sola
+     a los precios de arriba. Quien entra por la dirección común nunca lo ve. */
+  beneficio: {
+    clave: 'vivo',
+    hasta: '2026-10-21T23:59:59-03:00',
+    fecha: 'miércoles 21 de octubre',
+    porcentaje: 30,
+    regiones: {
+      ar:  { precio: 'ARS 66.500', paypal: '' },
+      lat: { precio: 'USD 56', paypal: 'https://www.paypal.com/paypalme/soysuperdotado/56USD' },
+      eu:  { precio: 'EUR 56', paypal: 'https://www.paypal.com/paypalme/soysuperdotado/56EUR' }
+    }
   }
 };
 
@@ -883,11 +914,36 @@ var CONFIG = {
   var $ = function (s, r) { return (r || document).querySelector(s); };
   var $$ = function (s, r) { return Array.prototype.slice.call((r || document).querySelectorAll(s)); };
 
+  /* ── Beneficio del ciclo en vivo: reemplaza precios y enlaces de PayPal ── */
+  var B = CONFIG.beneficio;
+  var conBeneficio = false;
+  try {
+    conBeneficio = !!B && new URLSearchParams(location.search).get('beneficio') === B.clave &&
+      new Date() <= new Date(B.hasta);
+  } catch (e) { conBeneficio = false; }
+  if (conBeneficio) {
+    Object.keys(B.regiones).forEach(function (k) {
+      var r = CONFIG.regiones[k], d = B.regiones[k];
+      if (!r || !d) return;
+      r.antes = r.precio;
+      r.precio = d.precio;
+      if (d.paypal) r.paypal = d.paypal;
+    });
+  }
+  function ponerPrecio(el, r) {
+    if (r.antes) {
+      el.innerHTML = '<span class="precio-antes"><span class="solo-lectores">Antes </span>' + r.antes +
+        '</span><span class="solo-lectores">, ahora </span>' + r.precio;
+    } else {
+      el.textContent = r.precio;
+    }
+  }
+
   /* ── Precios y enlaces desde CONFIG ── */
   var claves = Object.keys(CONFIG.regiones);
   claves.forEach(function (k) {
     var r = CONFIG.regiones[k];
-    $$('[data-precio="' + k + '"]').forEach(function (el) { el.textContent = r.precio; });
+    $$('[data-precio="' + k + '"]').forEach(function (el) { ponerPrecio(el, r); });
     $$('[data-paypal="' + k + '"]').forEach(function (el) {
       if (r.paypal) { el.href = r.paypal; el.textContent = 'Pagar ' + r.precio + ' con PayPal'; }
     });
@@ -905,6 +961,35 @@ var CONFIG = {
     $('#pasos-manual').hidden = true;
     $('#pasos-auto').hidden = false;
     $('#comprobante').hidden = true;
+  }
+
+  if (conBeneficio) {
+    document.documentElement.classList.add('con-beneficio');
+    var texto = B.porcentaje + '\u00a0% de descuento';
+    var cab = $('.cabecera');
+    if (cab) {
+      var franja = document.createElement('div');
+      franja.className = 'beneficio-franja';
+      franja.innerHTML = '<div class="wrap"><span><strong>Beneficio para participantes del ciclo en vivo:</strong> ' +
+        texto + ' hasta el ' + B.fecha + '.</span><a href="#comprar">Ver precios</a></div>';
+      cab.parentNode.insertBefore(franja, cab.nextSibling);
+    }
+    var cajaB = $('#caja-compra');
+    if (cajaB) {
+      var aviso = document.createElement('div');
+      aviso.className = 'beneficio-caja';
+      aviso.innerHTML = '<p class="beneficio-titulo">Beneficio para participantes del ciclo en vivo · ' + texto + '</p>' +
+        '<p>Los precios ya tienen el descuento aplicado. Válido hasta el ' + B.fecha + ' inclusive.</p>';
+      cajaB.insertBefore(aviso, cajaB.firstChild);
+    }
+    var btnF = $('#btn-formulario');
+    if (btnF) {
+      var nota = document.createElement('p');
+      nota.className = 'modalidad-nota';
+      nota.innerHTML = 'En la pregunta <strong>«Modalidad»</strong> del formulario, elige <strong>«Participé del ciclo en vivo (' +
+        texto + ')»</strong>.';
+      btnF.parentNode.insertBefore(nota, btnF);
+    }
   }
 
   /* ── Formulario de inscripción ── */
@@ -953,7 +1038,7 @@ var CONFIG = {
       if (activa && foco) t.focus();
     });
     var enBarra = $('#barra-precio');
-    if (enBarra && CONFIG.regiones[k]) enBarra.textContent = CONFIG.regiones[k].precio;
+    if (enBarra && CONFIG.regiones[k]) ponerPrecio(enBarra, CONFIG.regiones[k]);
   }
   function regionPorZona() {
     try {

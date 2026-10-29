@@ -891,15 +891,17 @@ var CONFIG = {
     eu:  { precio: 'EUR 80', paypal: 'https://www.paypal.com/paypalme/soysuperdotado/80EUR', checkout: '' }
   },
 
-  /* Beneficio para participantes del ciclo en vivo.
-     Solo se ve entrando con la dirección …/circuito-saturado/?beneficio=vivo
+  /* Beneficio para un grupo (participantes de ciclos anteriores).
+     Solo se ve entrando con la dirección …/circuito-saturado/?beneficio=ciclos
      y solo hasta la fecha «hasta». Pasada esa fecha, la página vuelve sola
      a los precios de arriba. Quien entra por la dirección común nunca lo ve. */
   beneficio: {
-    clave: 'vivo',
-    hasta: '2026-10-21T23:59:59-03:00',
-    fecha: 'miércoles 21 de octubre',
+    clave: 'ciclos',
+    hasta: '2026-11-01T23:59:59-03:00',
+    fecha: 'domingo 1 de noviembre',
     porcentaje: 30,
+    titulo: 'Beneficio para participantes de ciclos anteriores',
+    opcion: 'Participé de un ciclo anterior',
     regiones: {
       ar:  { precio: 'ARS 66.500', paypal: '' },
       lat: { precio: 'USD 56', paypal: 'https://www.paypal.com/paypalme/soysuperdotado/56USD' },
@@ -913,7 +915,7 @@ var CONFIG = {
   var $ = function (s, r) { return (r || document).querySelector(s); };
   var $$ = function (s, r) { return Array.prototype.slice.call((r || document).querySelectorAll(s)); };
 
-  /* ── Beneficio del ciclo en vivo: reemplaza precios y enlaces de PayPal ── */
+  /* ── Beneficio: reemplaza precios y enlaces de PayPal ── */
   var B = CONFIG.beneficio;
   var conBeneficio = false;
   try {
@@ -969,7 +971,7 @@ var CONFIG = {
     if (cab) {
       var franja = document.createElement('div');
       franja.className = 'beneficio-franja';
-      franja.innerHTML = '<div class="wrap"><span><strong>Beneficio para participantes del ciclo en vivo:</strong> ' +
+      franja.innerHTML = '<div class="wrap"><span><strong>' + B.titulo + ':</strong> ' +
         texto + ' hasta el ' + B.fecha + '.</span><a href="#comprar">Ver precios</a></div>';
       cab.parentNode.insertBefore(franja, cab.nextSibling);
     }
@@ -977,7 +979,7 @@ var CONFIG = {
     if (cajaB) {
       var aviso = document.createElement('div');
       aviso.className = 'beneficio-caja';
-      aviso.innerHTML = '<p class="beneficio-titulo">Beneficio para participantes del ciclo en vivo · ' + texto + '</p>' +
+      aviso.innerHTML = '<p class="beneficio-titulo">' + B.titulo + ' · ' + texto + '</p>' +
         '<p>Los precios ya tienen el descuento aplicado. Válido hasta el ' + B.fecha + ' inclusive.</p>';
       cajaB.insertBefore(aviso, cajaB.firstChild);
     }
@@ -985,7 +987,7 @@ var CONFIG = {
     if (btnF) {
       var nota = document.createElement('p');
       nota.className = 'modalidad-nota';
-      nota.innerHTML = 'En la pregunta <strong>«Modalidad»</strong> del formulario, elige <strong>«Participé del ciclo en vivo (' +
+      nota.innerHTML = 'En la pregunta <strong>«Modalidad»</strong> del formulario, elige <strong>«' + B.opcion + ' (' +
         texto + ')»</strong>.';
       btnF.parentNode.insertBefore(nota, btnF);
     }
